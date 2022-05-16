@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>problem 1</title>
+<style>
+
+</style>
+</head>
+<body>
+
+	<script>
+var l = prompt("Enter l: ");
+
+function fibbo(n)
+{
+    if(n < 2){
+        return n;
+    }
+    else{
+	return fibbo(n-1) + fibbo(n-2);
+	}
+
+}
+
+alert(fibbo(l));
+location.reload();
+
+	</script>
+ </body>
+</html>
