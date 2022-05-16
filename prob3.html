@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>problem 3</title>
+<style>
+
+</style>
+</head>
+<body>
+
+	<script>
+function matrix(){
+        //1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+let my_matrix = [
+        [1,2,3,4],
+        [5,6,7,8],
+        [9,10,11,12],
+        [13,14,15,16],
+];
+let arr = [];
+let start_Syun = 0;
+let start_tox = 0;
+let end_syun = 3;
+let end_tox = 3;
+let k = 0;
+
+while(start_Syun<=end_syun && start_tox<=end_tox){
+    for(let i = start_Syun; i<=end_syun;i++){
+       arr[k] = my_matrix[start_Syun][i];
+       k++;
+    }
+    start_tox++;
+    for(let j=start_tox;j<=end_tox;j++){
+       arr[k] = my_matrix[j][end_tox];
+        k++;
+    }
+    end_syun--;
+    for(let l = end_syun; l>=start_Syun;l--){
+       arr[k] = my_matrix[end_tox][l];
+       k++;
+    }
+    end_tox--;
+    for(let p=end_tox;p>=start_tox;p--){
+        arr[k] = my_matrix[p][start_Syun];
+        k++;
+    }
+    start_Syun++;
+}
+
+return arr;
+
+}
+    console.log(matrix());
+	</script>
+ </body>
+</html>
